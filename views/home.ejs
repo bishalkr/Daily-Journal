@@ -1,0 +1,32 @@
+<%- include('partials/header'); -%>
+
+<h1> Home </h1>
+
+<p>
+  <%= homeContent %>
+</p>
+<p>
+   This website brings the simplest way to add and keep track of your journals
+  </p>
+
+<a href="/compose " style ="color:red" > Enter your journal</a>
+
+
+<% for(let i=0 ;i<posts.length;i++){ %>
+ <h1> <%= posts[i].title %></h1>
+ <p>
+
+
+
+
+   <%= posts[i].content.substring(0,100) + "..." %> <a href = "/posts/<%= posts[i].title %>">read more</a>
+
+
+   </p>
+<%} %>
+
+
+
+
+
+<%- include('partials/footer'); -%>
